@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Companies & Department Specializations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Tech Companies</h2>
+
+  <!-- Loading indicator -->
+  <div id="loading" style="display: none; text-align: center;">Loading data...</div>
+
+  <!-- Select boxes for Company and Department -->
+  <label for="companySelect"></label>
+  <select id="companySelect">
+    <option value="">Select Company</option>
+  </select>
+
+  <label for="departmentSelect"></label>
+  <select id="departmentSelect" disabled>
+    <option value="">Select Department</option>
+  </select>
+
+  <label for="specializationSelect"></label>
+  <select id="specializationSelect" disabled>
+    <option value="">Select Specialization</option>
+  </select>
+
+  <!-- Table for displaying specializations -->
+  <table id="specializationsTable" style="display: none;">
+    <thead>
+      <tr>
+        <th>#</th> <!-- Numbering column -->
+        <th>Colleague Name</th>
+        <th>Email</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Script that handles the dynamic content population -->
+  <script src="script.js"></script>
+</body>
+</html>

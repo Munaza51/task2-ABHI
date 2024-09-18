@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: rgb(247, 220, 193);
+  }
+  
+  /* Heading style */
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Select elements styling */
+  select {
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 14px;
+    width: 400px;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Table styling */
+  table {
+    margin: 20px auto; 
+    width: 60%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Loading indicator styling */
+  #loading {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+  }
