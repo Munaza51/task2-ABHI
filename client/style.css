@@ -43,3 +43,34 @@ body {
     font-weight: bold;
     color: #555;
   }
+
+ /* Center the ERD diagram */
+ body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  flex-direction: column;
+}
+
+#erdContainer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.mermaid {
+  display: inline-block;
+  max-width: 100%;
+  transform: scale(3.5); /* Increase the diagram size */
+  transform-origin: top center; /* Center scaling */
+}
+
+/* Optional: Ensure padding around the edges */
+#erdContainer {
+  padding: 20px;
+}

@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Companies & Department Specializations</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Include Mermaid.js -->
+  <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+  </script>
+   
 </head>
 <body>
   <h2>Tech Companies</h2>
@@ -40,6 +46,140 @@
     </thead>
     <tbody></tbody>
   </table>
+
+  <!-- Mermaid ERD Diagram -->
+  <h2>Entity Relationship Diagram (ERD)</h2>
+  <div class="mermaid">
+    erDiagram
+      COMPANY ||--o{ DEPARTMENT : has
+      DEPARTMENT ||--o{ SPECIALIZATION : has
+      SPECIALIZATION ||--o{ COLLEAGUE : has
+
+      COMPANY {
+          int id
+          string name
+      }
+
+      DEPARTMENT {
+          int id
+          string name
+          int company_id
+      }
+
+      SPECIALIZATION {
+          int id
+          string name
+          int department_id
+      }
+
+      COLLEAGUE {
+          int id
+          string name
+          string email
+          int age
+          int specialization_id
+      }
+
+      %% Google
+      COMPANY ||--o{ Google_Department : has
+      Google_Department ||--o{ Google_Specialization : has
+      Google_Specialization ||--o{ Google_Colleague : has
+
+      Google_Department {
+          int id
+          string name
+          int company_id
+      }
+
+      Google_Specialization {
+          int id
+          string name
+          int department_id
+      }
+
+      Google_Colleague {
+          int id
+          string name
+          string email
+          int age
+          int specialization_id
+      }
+
+      %% Microsoft
+      COMPANY ||--o{ Microsoft_Department : has
+      Microsoft_Department ||--o{ Microsoft_Specialization : has
+      Microsoft_Specialization ||--o{ Microsoft_Colleague : has
+
+      Microsoft_Department {
+          int id
+          string name
+          int company_id
+      }
+
+      Microsoft_Specialization {
+          int id
+          string name
+          int department_id
+      }
+
+      Microsoft_Colleague {
+          int id
+          string name
+          string email
+          int age
+          int specialization_id
+      }
+
+      %% Amazon
+      COMPANY ||--o{ Amazon_Department : has
+      Amazon_Department ||--o{ Amazon_Specialization : has
+      Amazon_Specialization ||--o{ Amazon_Colleague : has
+
+      Amazon_Department {
+          int id
+          string name
+          int company_id
+      }
+
+      Amazon_Specialization {
+          int id
+          string name
+          int department_id
+      }
+
+      Amazon_Colleague {
+          int id
+          string name
+          string email
+          int age
+          int specialization_id
+      }
+
+      %% Apple
+      COMPANY ||--o{ Apple_Department : has
+      Apple_Department ||--o{ Apple_Specialization : has
+      Apple_Specialization ||--o{ Apple_Colleague : has
+
+      Apple_Department {
+          int id
+          string name
+          int company_id
+      }
+
+      Apple_Specialization {
+          int id
+          string name
+          int department_id
+      }
+
+      Apple_Colleague {
+          int id
+          string name
+          string email
+          int age
+          int specialization_id
+      }
+  </div>
 
   <!-- Script that handles the dynamic content population -->
   <script src="script.js"></script>
